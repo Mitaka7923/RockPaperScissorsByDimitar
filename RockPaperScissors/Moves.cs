@@ -29,6 +29,7 @@ namespace RockPaperScissors
 
         internal static string? GetUserMove()
         {
+            Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
             var playerMove = Console.ReadLine().ToLower();
 
             if (playerMove == "r" || playerMove == "rock")
@@ -47,11 +48,12 @@ namespace RockPaperScissors
             {
                 if (playerMove.Trim().ToLower().Equals("exit"))
                 {
-                    Messages.Print(Messages.Exit);
+                    Console.WriteLine(Messages.Exit);
                     Environment.Exit(0);
                 }
 
-                Console.WriteLine("Invalid Input. Try Again...");
+                Console.Write("Invalid Input. Press any key to try Again...");
+                Console.ReadKey(true);
                 return null;
             }
 
