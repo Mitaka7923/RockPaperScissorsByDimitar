@@ -13,10 +13,5 @@ namespace RockPaperScissors
         internal static string Draw = "This game is a draw.";
         internal static string TryAgain = "\nPress any key to try again. . .";
         internal static string Exit = "Press any key to exit. . .";
-
-        internal static void Print(string message) 
-        {
-            Console.Write(message);
-        }
     }
 }
