@@ -23,7 +23,14 @@
                 Console.WriteLine($"The computer chose {computer.Move}.");
 
                 var winner = Battle.ReturnWinner(user, computer);
-                Display.DisplayWinner(winner.Username);
+                if (winner != null)
+                {
+                    Display.DisplayWinner(winner.Username);
+                }
+                else
+                {
+                    Console.WriteLine("TIE!");
+                }
 
                 Console.WriteLine(Messages.TryAgain);
                 Console.ReadKey();
